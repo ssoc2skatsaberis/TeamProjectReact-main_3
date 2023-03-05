@@ -39,6 +39,7 @@ const AddNewCourse = () => {
             .then(response => response.json())
             .then(data => console.log(data))
             .catch(error => console.error(error));
+ 
 
     }
     return (
@@ -52,7 +53,7 @@ const AddNewCourse = () => {
                             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
                             Title
                         </label>
-                        <input
+                        <input required
                             className="  appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 justify-center"
                             name="title" type="text"
                             onChange={
@@ -64,7 +65,7 @@ const AddNewCourse = () => {
                             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
                             Duration
                         </label>
-                        <input
+                        <input required
                             className=" block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="duration" type="text" onChange={(e) => setDuration((e.target.value))} placeholder="Duration"></input>
                     </div>
@@ -73,14 +74,14 @@ const AddNewCourse = () => {
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
                     Image Path
                 </label>
-                {<input
+                {<input required
                     className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     name="imagePath" type="text" onChange={(e) => setImagePath((e.target.value))} placeholder="Image Path"></input>}
                 <label
                     className=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                     online
                 </label>
-                <input type="checkbox" onChange={(e) => setOnline((e.target.checked))} />
+                <input  type="checkbox" onChange={(e) => setOnline((e.target.checked))} />
                 <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                     description
@@ -97,7 +98,7 @@ const AddNewCourse = () => {
                             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                             Start Date
                         </label>
-                        <input
+                        <input required
                             className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="start_date" type="date" onChange={(e) => setStart_date((e.target.value))}></input>
                     </div>
@@ -105,7 +106,7 @@ const AddNewCourse = () => {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                             End Date
                         </label>
-                        <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        <input required className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="end_date" type="date" onChange={(e) => setEnd_date((e.target.value))}></input>
                     </div>
                 </div>
@@ -118,14 +119,14 @@ const AddNewCourse = () => {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                             Early Bird
                         </label>
-                        <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        <input required className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="early_bird" type="number" onChange={(e) => setEarly_bird((e.target.value))}></input>
                     </div>
                     <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                             Normal Price
                         </label>
-                        <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        <input required className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="normal" type="number" onChange={(e) => setNormal((e.target.value))}></input>
                     </div>
                 </div>

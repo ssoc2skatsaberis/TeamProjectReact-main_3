@@ -41,7 +41,7 @@ useEffect(()=>{
                             </thead>
                             <tbody className="text-indigo-800 text-center">
                                 {courses.length && courses.map((item) =>{
-                                     return (<CourseItem key={item.id} title={item.title} duration={item.duration} start_date ={item.dates.start_date} end_date={item.dates.end_date} online={item.online} id={item.id}/>)
+                                     return (<CourseItem key={item.id} title={item.title} duration={item.duration} start_date ={item.dates.start_date.split("-").reverse().join("/")} end_date={item.dates.end_date.split("-").reverse().join("/")} online={item.online} id={item.id}/>)
                                 }
         
                                 )}                                                           

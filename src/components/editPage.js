@@ -12,7 +12,7 @@ export default function EditPage(props)  {
         <Link to='/' className='text-black-50 p-2 col-md-5'>Go Back</Link>
     </div>
 
-    console.log("TEST",props.data.title);
+    
     
    // const [post, setPost] = useState(null);
     const [title, setTitle] = useState(props.data.title);
@@ -27,8 +27,6 @@ export default function EditPage(props)  {
     const [normal, setNormal] = useState(props.data.price.normal);
 
     let id = (props.idNumber);
-    console.log(id);
- 
     
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -47,28 +45,15 @@ export default function EditPage(props)  {
         axios.put('http://localhost:3001/courses/'+props.idNumber, data)
         .then((response) => {
             console.log("THE END",response)
-           //   setPost(response.data);
-         //   setTitle(response.title);
-         //   setDescription(response.description);
-         //   setDuration(post.duration);
-         //   setImagePath(post.imagePath);
-         //   setOnline(post.online);
-         //   setStart_date(post.dates.start_date);
-         //   setEnd_date(post.dates.end_date);
-         //   setEarly_bird(post.price.early_bird);
-         //   setNormal(post.price.normal_bird);
+
         }
         )
         .catch((error) => console.log(error));
-
-        
             
         props.close();
         props.fetchDetails();
     }
  
-
-
     if (!props.open) return null;
    
     return (

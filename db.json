@@ -91,6 +91,70 @@
       "duration": "1 month",
       "online": false,
       "description": "Το σεμινάριο απευθύνεται σε συμμετέχοντες που επιθυμούν να μάθουν πώς να επεξεργάζονται εικόνες και να δημιουργούν τα δικά τους γραφικά με εύκολο τρόπο. εικόνας. Χρησιμοποιώντας την online πλατφόρμα σχεδιασμού Canva θα φτιάξουμε εύκολα και γρήγορα δελεαστικά δημιουργικά. Αν θέλεις να ανεβάζεις ελκυστικές αναρτήσεις στο διαδίκτυο, αυτό το σεμινάριο είναι φτιαγμένο για σένα!"
+    },
+    {
+      "title": "asd",
+      "imagePath": "images.jpg",
+      "price": {
+        "early_bird": "2",
+        "normal": "5"
+      },
+      "dates": {
+        "start_date": "2023-03-05",
+        "end_date": "2023-03-06"
+      },
+      "duration": "1 month",
+      "online": false,
+      "description": "asdasdad",
+      "id": "TzOl57P"
+    },
+    {
+      "title": "asd",
+      "imagePath": "images.jpg",
+      "price": {
+        "early_bird": "2",
+        "normal": "5"
+      },
+      "dates": {
+        "start_date": "2023-03-05",
+        "end_date": "2023-03-06"
+      },
+      "duration": "1 month",
+      "online": false,
+      "description": "asdasdad",
+      "id": "e6Yo7IL"
+    },
+    {
+      "id": "nQ21jDV",
+      "title": "asdasdasdasdas",
+      "imagePath": "asdasdasdasdasda",
+      "price": {
+        "early_bird": "1",
+        "normal": "3"
+      },
+      "dates": {
+        "start_date": "2023-03-05",
+        "end_date": "2023-04-08"
+      },
+      "duration": "asdasdasdasdasdasdad",
+      "online": true,
+      "description": "asdasdasdasdasd"
+    },
+    {
+      "title": "",
+      "imagePath": "asdasdasdasdasda",
+      "price": {
+        "early_bird": "1",
+        "normal": "3"
+      },
+      "dates": {
+        "start_date": "2023-03-05",
+        "end_date": "2023-04-08"
+      },
+      "duration": "asdasdasdasdasdasdad",
+      "online": false,
+      "description": "asdasdasdasdasd",
+      "id": "AzpkzDM"
     }
   ]
 }
