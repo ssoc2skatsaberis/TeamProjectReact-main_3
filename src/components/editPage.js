@@ -64,6 +64,7 @@ export default function EditPage(props)  {
         
             
         props.close();
+        props.fetchDetails();
     }
  
 

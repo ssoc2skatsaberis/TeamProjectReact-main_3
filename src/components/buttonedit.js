@@ -16,7 +16,7 @@ export default function ButtonEdit(props){
             <button onClick={() => openModal()} class="border-4 border-indigo-200 hover:border-b-gray-500 bg-blue-500 hover:bg-cyan-600">
             <span class="m-8">Edit</span></button>
             
-            <EditPage data = {props.data} idNumber={props.idNumber} open={isModalOpen} close={closeModal} />
+            <EditPage fetchDetails={props.fetchDetails} data = {props.data} idNumber={props.idNumber} open={isModalOpen} close={closeModal} />
         </div>
     );
 }
