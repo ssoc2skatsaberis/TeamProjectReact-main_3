@@ -2,6 +2,8 @@ import {useState,useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import LoadingSpinner from './LoadingSpinner';
 
+import Buttons from "./buttons";
+
 export default function CoursePractisePage(){
     
     const API = 'http://localhost:3001/courses/';
@@ -68,6 +70,8 @@ export default function CoursePractisePage(){
                                 <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-gift"></i></span></div>
                         <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">Early-bird Price:<span>{course.price.early_bird}</span></h4></div></div></li>
                         </ul>
+                        <Buttons data={course} idNumber={course.id} />
+       
                         </div>
                         </div>
                         </div>
