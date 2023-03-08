@@ -58,10 +58,12 @@ export default function EditPage(props)  {
    
     return (
         
-        
+    <div className="z-10 " aria-labelledby="modal-title" role="dialog" aria-modal="true">      
+         <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>  
+       
         <div style={{ position: 'relative', zIndex: '2'}} className="">
         
-            <form onSubmit={handleSubmit} className="fixed top-10 left-10 right-10 bg-sky-100">
+            <form onSubmit={handleSubmit} className="fixed top-5 left-10 right-10 sm:max-xl:flex sm:max-xl:flex-wrap sm:max-xl:w-[90%] sm:max-xl:h-[90%] sm:max-xl:overflow-auto bg-sky-100">
             <button type="button" class="absolute top-0 right-0 h-16 w-16 box-border h-12 w-12 p-4 border-4 bg-gradient-to-r from-sky-400 to-red-500 hover:from-pink-500 hover:to-blue-500"
             onClick={() => {
             props.close();
@@ -69,15 +71,15 @@ export default function EditPage(props)  {
         >
             X
         </button>
-                <h1 className="font-extrabold text-5xl mb-8  ">Edit Course</h1>
+                <h1 className="m-2 font-extrabold text-5xl ">Edit Course</h1>
                 <div className="flex flex-wrap -mx-2">
                     <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                         <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
+                            className="m-3  block uppercase tracking-wide text-gray-700 text-xs font-bold" htmlFor="grid-first-name">
                             Title
                         </label>
                         <input required value={title}
-                            className="  appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 justify-center"
+                            className=" mx-4  appearance-none block w-[90%] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 justify-center"
                             name="title" type="text"
                             onChange={
                                 (e) => setTitle((e.target.value))
@@ -85,78 +87,79 @@ export default function EditPage(props)  {
                     </div>
                     <div className="w-full md:w-1/2 px-2">
                         <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
+                            className="m-3 block uppercase tracking-wide text-gray-700 text-xs font-bold" htmlFor="grid-first-name">
                             Duration
                         </label>
                         <input required value={duration} 
-                            className=" block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            className=" mx-4  block w-[90%] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="duration" type="text" onChange={(e) => setDuration((e.target.value))} placeholder="Duration"></input>
                     </div>
                 </div>
                 <label
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
+                    className="m-3 block uppercase tracking-wide text-gray-700 text-xs font-bold " htmlFor="grid-first-name">
                     Image Path
                 </label>
                 {<input required value={imagePath} 
-                    className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    className=" mx-4  w-[95%] bg bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     name="imagePath" type="text" onChange={(e) => setImagePath((e.target.value))} placeholder="Image Path"></input>}
                 <label
-                    className=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
+                    className="m-3 uppercase tracking-wide text-gray-700 text-xs font-bold" >
                     online
                 </label>
                 <input checked={online} type="checkbox" onChange={(e) => setOnline((e.target.checked))} />
                 <label
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
+                    className="m-3 block uppercase tracking-wide text-gray-700 text-xs font-bold " >
                     description
                 </label>
                 <textarea required value={description}
-                    className="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3"
+                    className="block mx-4  w-[95%]  bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 "
                     name="description" type="text" onChange={(e) => setDescription((e.target.value))}>
                 </textarea>
 
-                <p className="font-bold font-weight: 700">Dates</p>
+                <p className=" m-2 font-bold font-weight: 700">Dates</p>
                 <div className="flex flex-wrap -mx-2">
                     <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                         <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
+                            className="m-3 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                             Start Date
                         </label>
                         <input required value={start_date}
-                            className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            className=" mx-4  w-[90%] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4  leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="start_date" type="date" onChange={(e) => setStart_date((e.target.value))}></input>
                     </div>
                     <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
-                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
+                        <label className="m-2 block uppercase tracking-wide text-gray-700 text-xs font-bold" >
                             End Date
                         </label>
-                        <input required value={end_date} className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        <input required value={end_date} className="mx-4  w-[90%] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="end_date" type="date" onChange={(e) => setEnd_date((e.target.value))}></input>
                     </div>
                 </div>
-                <p className="font-bold font-weight: 700"> Price </p>
+                <p className="m-2 font-bold font-weight: 700"> Price </p>
 
-                <div className="flex flex-wrap -mx-2">
-                    <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
+                <div className="flex flex-wrap -mx-2 ">
+                <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
 
 
-                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
+                        <label className="m-3 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                             Early Bird
                         </label>
-                        <input required value = {early_bird} className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        <input required value = {early_bird} className=" mx-4  w-[90%] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4  leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="early_bird" type="number" onChange={(e) => setEarly_bird((e.target.value))}></input>
                     </div>
-                    <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
-                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
+                    <div className= "w-full md:w-1/2 px-2 mb-4 md:mb-0">
+                        <label className="m-2 block uppercase tracking-wide text-gray-700 text-xs font-bold" >
                             Normal Price
                         </label>
-                        <input required value={normal} className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        <input required value={normal} className="mx-4  w-[90%] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="normal" type="number" onChange={(e) => setNormal((e.target.value))}></input>
                     </div>
+                    
                 </div>
-                <button  className="float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-right " type='submit'> Edit Course </button>
+                <button  className="m-2 float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-right " type='submit'> Update Course </button>
             </form>
 
-
+                            </div>
         </div>
  
  );

@@ -65,8 +65,8 @@
       "title": "Excel Plus",
       "imagePath": "/courses/excel.jpg",
       "price": {
-        "normal": 400,
-        "early_bird": 200
+        "early_bird": 200,
+        "normal": 400
       },
       "dates": {
         "start_date": "2023-01-15",
