@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-
-
 import axios from "axios";
-//import { render } from 'react-dom';
 
 console.clear();
 
@@ -12,9 +9,7 @@ export default function EditPage(props)  {
         <Link to='/' className='text-black-50 p-2 col-md-5'>Go Back</Link>
     </div>
 
-    
-    
-   // const [post, setPost] = useState(null);
+
     const [title, setTitle] = useState(props.data.title);
     const [duration, setDuration] = useState(props.data.duration);
     const [imagePath, setImagePath] = useState(props.data.imagePath);
@@ -55,7 +50,6 @@ export default function EditPage(props)  {
     }
  
     if (!props.open) return null;
-   
     return (
         
     <div className="z-10 " aria-labelledby="modal-title" role="dialog" aria-modal="true">      
@@ -63,7 +57,7 @@ export default function EditPage(props)  {
        
         <div style={{ position: 'relative', zIndex: '2'}} className="">
         
-            <form onSubmit={handleSubmit} className="fixed top-5 left-10 right-10 sm:max-xl:flex sm:max-xl:flex-wrap sm:max-xl:w-[90%] sm:max-xl:h-[90%] sm:max-xl:overflow-auto bg-sky-100">
+            <form onSubmit={handleSubmit} className="fixed top-5 left-10 right-10  sm:max-xl:flex sm:max-xl:flex-wrap sm:max-xl:w-[90%] sm:max-xl:h-[90%] sm:max-xl:overflow-auto bg-sky-100">
             <button type="button" class="absolute top-0 right-0 h-16 w-16 box-border h-12 w-12 p-4 border-4 bg-gradient-to-r from-sky-400 to-red-500 hover:from-pink-500 hover:to-blue-500"
             onClick={() => {
             props.close();

@@ -9,9 +9,7 @@ export default function CoursePractisePage(){
     const API = 'http://localhost:3001/courses/';
     const params = useParams();
     const [course,setCourse]= useState(null);
-    const [isLoading, setIsLoading] = useState(false);
-    // const navigate = useNavigate();
-
+    
     const fetchDetails = () =>{
         setTimeout(function() 
         {
@@ -26,7 +24,6 @@ export default function CoursePractisePage(){
     }
     useEffect(()=>{
         fetchDetails()
-        // .then(navigate("/courses/01"))
     },);
 
 
@@ -83,4 +80,4 @@ export default function CoursePractisePage(){
 
     
     
-}//fetchDetails={fetchDetails()}
+}

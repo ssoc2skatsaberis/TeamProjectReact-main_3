@@ -73,7 +73,7 @@
         "end_date": "2023-01-30"
       },
       "duration": "2 weeks",
-      "online": true,
+      "online": false,
       "description": "Στο μάθημα αυτό θα μάθουμε πως μπορούμε να αξιοποιήσουμε τα εργαλεία που μας δίνει το Excel προκειμένου να χειριστούμε τα δεδομένα μας εύκολα και γρήγορα και να εμβαθύνουμε τις γνώσεις μας. Προαπαιτούμενη γνώση από το Βασικό Επίπεδο Excel."
     },
     {
@@ -89,72 +89,40 @@
         "end_date": "2023-03-15"
       },
       "duration": "1 month",
-      "online": false,
+      "online": true,
       "description": "Το σεμινάριο απευθύνεται σε συμμετέχοντες που επιθυμούν να μάθουν πώς να επεξεργάζονται εικόνες και να δημιουργούν τα δικά τους γραφικά με εύκολο τρόπο. εικόνας. Χρησιμοποιώντας την online πλατφόρμα σχεδιασμού Canva θα φτιάξουμε εύκολα και γρήγορα δελεαστικά δημιουργικά. Αν θέλεις να ανεβάζεις ελκυστικές αναρτήσεις στο διαδίκτυο, αυτό το σεμινάριο είναι φτιαγμένο για σένα!"
     },
     {
-      "title": "asd",
+      "title": "Εισαγωγή στο Storytelling geia",
       "imagePath": "images.jpg",
       "price": {
-        "early_bird": "2",
-        "normal": "5"
+        "early_bird": "4",
+        "normal": "6"
       },
       "dates": {
-        "start_date": "2023-03-05",
-        "end_date": "2023-03-06"
-      },
-      "duration": "1 month",
-      "online": false,
-      "description": "asdasdad",
-      "id": "TzOl57P"
-    },
-    {
-      "title": "asd",
-      "imagePath": "images.jpg",
-      "price": {
-        "early_bird": "2",
-        "normal": "5"
-      },
-      "dates": {
-        "start_date": "2023-03-05",
-        "end_date": "2023-03-06"
-      },
-      "duration": "1 month",
-      "online": false,
-      "description": "asdasdad",
-      "id": "e6Yo7IL"
-    },
-    {
-      "id": "nQ21jDV",
-      "title": "asdasdasdasdas",
-      "imagePath": "asdasdasdasdasda",
-      "price": {
-        "early_bird": "1",
-        "normal": "3"
-      },
-      "dates": {
-        "start_date": "2023-03-05",
+        "start_date": "2023-04-01",
         "end_date": "2023-04-08"
       },
-      "duration": "asdasdasdasdasdasdad",
+      "duration": "2 weeks",
       "online": true,
-      "description": "asdasdasdasdasd"
+      "description": "test",
+      "id": "j4nsbbT"
     },
     {
-      "title": "",
-      "imagePath": "asdasdasdasdasda",
+      "title": "Εισαγωγή στο Storytelling geia",
+      "imagePath": "images.jpg",
       "price": {
-        "early_bird": "1",
-        "normal": "3"
+        "early_bird": "4",
+        "normal": "6"
       },
       "dates": {
-        "start_date": "2023-03-05",
+        "start_date": "2023-04-01",
         "end_date": "2023-04-08"
       },
-      "duration": "asdasdasdasdasdasdad",
-      "online": false,
-      "description": "asdasdasdasdasd",
-      "id": "AzpkzDM"
+      "duration": "2 weeks",
+      "online": true,
+      "description": "test",
+      "id": "-HneYI7"
     }
   ]
 }
