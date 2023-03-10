@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import LoadingSpinner from './LoadingSpinner';
 
-import Buttons from "./buttons";
+import Buttons from "./Buttons";
 
 export default function CoursePractisePage(){
     
@@ -11,8 +11,8 @@ export default function CoursePractisePage(){
     const [course,setCourse]= useState(null);
     
     const fetchDetails = () =>{
-        setTimeout(function() 
-        {
+   //    setTimeout(function() 
+     //  {
         fetch(`${API}${params.id}`)
         .then((res)=> res.json())
         .then((data) => setCourse(data))
@@ -20,11 +20,11 @@ export default function CoursePractisePage(){
         .catch((error) => {
             console.log("Error in fetching:",error)
           });
-       }, 1500);
+  //     }, 1500);
     }
     useEffect(()=>{
         fetchDetails()
-    },);
+    },[]);
 
 
     if (!course) {
@@ -68,7 +68,7 @@ export default function CoursePractisePage(){
                                 <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-gift"></i></span></div>
                         <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">Early-bird Price:<span>{course.price.early_bird}</span></h4></div></div></li>
                         </ul>
-                        <Buttons  data={course} idNumber={course.id} />
+                        <Buttons fetchDetails={fetchDetails} data={course} idNumber={course.id} />
        
                         </div>
                         </div>
@@ -81,3 +81,4 @@ export default function CoursePractisePage(){
     
     
 }
+//fetchDetails={fetchDetails()}

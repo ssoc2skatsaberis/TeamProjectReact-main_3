@@ -1,6 +1,6 @@
 
-import ButEdit from "./buttonedit";
-import ButDel from "./buttondelete";
+import ButEdit from "./Buttonedit";
+import ButDel from "./Buttondelete";
 
 
 
